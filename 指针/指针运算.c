@@ -35,5 +35,6 @@ int main(int argc, char const *argv[])
 //指针可以做<;<=;>'>=;!='
 	//void*表示不知道指向什么类型的指针
 	//用来测试VS Code的同步能力
+//究竟能不能同步啊?
 	return 0;
 }
