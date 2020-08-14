@@ -35,3 +35,29 @@ struct point *Name1(struct point *p){
  }
  ```  
  其中<kbd>p->x == (*p).x</kbd>，且<kbd>p</kbd>必须为指针变量
+
+-------------
+
+```C
+struct point{
+  /*代码块*/
+};
+```
+只是声明结构，相当于typedef一个新的类型名称  
+```C
+struct point Name;
+```
+其中*Name*才是所定义的变量名，之后的<kbd>.</kbd>运算都应该以**Name**开始而不是以*point*开始
+## 联合
+```C
+union Name{
+  int i;
+  char c;
+}element;
+```
+对union类型定义，其中
+```C
+element.i = x;
+element.c = 'char';
+```
+中的<kbd>int</kbd>类型和<kbd>char</kbd>类型同一时间只有一个有效，占据同一个内存空间， *sizeof(union.)*为成员中的最大值
