@@ -17,7 +17,7 @@ void add(List *pList, int number);
 
 void print(List *pList);
 
-    int main(int argc, char const *argv[])
+int main(int argc, char const *argv[])
 {
     Node *head = NULL;
     List list;
@@ -39,7 +39,7 @@ void print(List *pList);
     scanf("%d",&number);
     Node *p;
     int isFound = 0;
-    for( p=list.head;p;p->next)
+    for( p=list.head;p;p = p->next)
     {
         if( p->value == number)
         {
@@ -72,6 +72,9 @@ void print(List *pList);
         break;
     }
     
+    //检查是否删除number
+    print(&list);
+
     //链表的清除
     for ( p=head; p ; p=q)
     {

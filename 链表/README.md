@@ -12,3 +12,17 @@
 *Github上标签显示与VS Code上不一致，无法显示出颜色*
 
 > Github上使用标签导致markdown语法有误，删除后正常
+
+**for循环中无终止条件也能通过编译器，但运行会出错！**
+```C
+for( p=list.head;p;p->next)
+{
+        if( p->value == number)
+        {
+            printf("找到了\n");
+            isFound = 1;
+            break;
+        }
+}
+```
+*终止条件应该为`p=p->next`,但是可以写成`p->next`，编译不报错，程序出错*
