@@ -34,7 +34,7 @@ struct point *Name1(struct point *p){
   scanf("%d",&p->y);
  }
  ```  
- 其中<kbd>p->x == (*p).x</kbd>，且<kbd>p</kbd>必须为指针变量
+ 其中`p->x == (*p).x`，且`p`必须为指针变量
 
 -------------
 
@@ -47,7 +47,7 @@ struct point{
 ```C
 struct point Name;
 ```
-其中*Name*才是所定义的变量名，之后的<kbd>.</kbd>运算都应该以**Name**开始而不是以*point*开始
+其中*Name*才是所定义的变量名，之后的`.`运算都应该以**Name**开始而不是以*point*开始
 ## 联合
 ```C
 union Name{
@@ -60,4 +60,4 @@ union Name{
 element.i = x;
 element.c = 'char';
 ```
-中的<kbd>int</kbd>类型和<kbd>char</kbd>类型同一时间只有一个有效，占据同一个内存空间， *sizeof(union.)*为成员中的最大值
+中的`int`类型和`char`类型同一时间只有一个有效，占据同一个内存空间,*sizeof(union.)* 为成员中的最大值
