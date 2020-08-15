@@ -49,7 +49,36 @@ void print(List *pList);
         }
     }
     if( !isFound )
+    {    
         printf("没找到\n");
+    }
+    
+    //删除
+    Node *q;
+    for ( q=NULL,p=list.head; p ; q=p,p=p->next)
+    {
+        if (p->value == number)
+        {
+            //p->name出现在=左边， 使用之前必须保证不为NULL
+            if ( q )
+            {
+                q->next = p->next;
+            }
+            else{
+                list.head = p->next;
+            }
+        }
+        free(p);
+        break;
+    }
+    
+    //链表的清除
+    for ( p=head; p ; p=q)
+    {
+        q = p->next;
+        free(p);
+    }
+    
     return 0;
 }
 
