@@ -67,9 +67,10 @@ int main(int argc, char const *argv[])
             else{
                 list.head = p->next;
             }
+            free(p);//
+            break;//中止条件位置错误，导致
         }
-        free(p);
-        break;
+        
     }
     
     //检查是否删除number
@@ -113,7 +114,7 @@ void print(List *pList)
     Node *p;
     for (p = pList->head; p; p = p->next)
     {
-        printf("%d\n", p->value);
+        printf("%d\t", p->value);
     }
     printf("\n");
 }
